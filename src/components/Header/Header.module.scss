@@ -1,0 +1,18 @@
+.header {
+  @apply relative border-none;
+  @apply h-24 flex justify-between items-center;
+  .navigation {
+    @apply flex justify-center items-center;
+    .logoImg {
+      @apply h-12 border;
+    }
+  }
+
+  .openMenu {
+    @apply md:hidden;
+  }
+
+  .linkedIn {
+    @apply hidden md:block;
+  }
+}
