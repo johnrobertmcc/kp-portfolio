@@ -1,0 +1,23 @@
+.drawer {
+  .menuDrawer {
+    @apply flex flex-col items-center w-full mt-16;
+    & > li {
+      @apply w-full h-16 text-center;
+      > a {
+        @apply block h-full w-full;
+      }
+      &:hover {
+        a {
+          @apply font-bold;
+        }
+      }
+    }
+  }
+
+  .mobileLinkedIn {
+    @apply w-full flex flex-col items-center h-16 justify-center;
+    & > svg {
+      @apply h-4;
+    }
+  }
+}

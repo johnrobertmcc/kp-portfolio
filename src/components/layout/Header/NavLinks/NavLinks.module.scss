@@ -1,0 +1,16 @@
+.list {
+  @apply hidden md:flex justify-between items-center;
+  @apply h-16;
+
+  .link {
+    @apply px-3 font-bold hover:underline h-full;
+    a {
+      @apply h-full;
+      @apply flex items-center;
+    }
+  }
+}
+
+.currentPath {
+  @apply bg-white underline;
+}

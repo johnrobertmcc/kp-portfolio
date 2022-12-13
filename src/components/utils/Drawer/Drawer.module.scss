@@ -9,6 +9,11 @@
     &.open {
       @apply translate-x-0 shadow-xl rounded-lg;
       @apply w-full sm:w-3/4 lg:w-1/2;
+      @apply flex flex-col justify-between;
+    }
+
+    .closeBtn {
+      @apply absolute top-5 left-5;
     }
   }
 

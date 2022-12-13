@@ -1,3 +1,27 @@
-.string{
-  font-weight: 900;
+.categories {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4 max-w-screen-lg mx-auto md:px-0;
+
+  .listItem {
+    @apply border cursor-pointer;
+
+    .imgContainer {
+      @apply relative h-72 w-full;
+
+      .image {
+        @apply absolute top-0 left-0 h-full w-full;
+      }
+    }
+  }
+}
+
+.intro {
+  @apply pt-10 text-lg grid grid-cols-2 col-span-1 max-w-screen-lg mx-auto;
+
+  .copy {
+    @apply pb-5;
+  }
+
+  .contact {
+    @apply underline text-xl row-start-2;
+  }
 }

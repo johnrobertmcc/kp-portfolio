@@ -39,7 +39,9 @@ export default function Drawer({ data, open, closeDrawer, className }) {
         className={cn(styles.modal, open && styles.open)}
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={() => closeDrawer()}>X</button>
+        <button className={styles.closeBtn} onClick={() => closeDrawer()}>
+          X
+        </button>
         {children}
       </div>
     </aside>

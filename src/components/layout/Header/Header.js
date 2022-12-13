@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Header.module.scss';
-import Container from 'components/Container';
+import Container from 'components/layout/Container';
 import NavLinks from './NavLinks';
 import NavMenu from './NavMenu';
 import cn from 'classnames';
 import { ACCESSIBLE_HEADER } from 'constants';
-import { RIGHT, LEFT } from './Header.utils';
-import { LINKED_IN } from 'constants';
+import LinkedIn from 'components/utils/LinkedIn';
+import { disableScroll, enableScroll } from 'functions/utils/scroll';
 
 /**
  * Renders the Global Header Component.
@@ -18,6 +18,18 @@ import { LINKED_IN } from 'constants';
  */
 export default function Header() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      disableScroll();
+    }
+
+    if (!open) {
+      enableScroll();
+    }
+  }, [open]);
+
+  console.log('jr open', open);
   return (
     <Container layout="nav" tag={'header'} className={cn(styles.header)}>
       <h1 className="sr-only">{ACCESSIBLE_HEADER}</h1>
@@ -33,7 +45,7 @@ export default function Header() {
         Menu
       </button>
       <NavMenu open={open} setOpen={setOpen} />
-      <a href={LINKED_IN} className={styles.linkedIn}>Linked In</a>
+      <LinkedIn />
     </Container>
   );
 }

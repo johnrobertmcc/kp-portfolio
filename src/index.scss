@@ -5,3 +5,7 @@
 body {
   margin: 0;
 }
+
+.no-scroll {
+  @apply overflow-hidden;
+}

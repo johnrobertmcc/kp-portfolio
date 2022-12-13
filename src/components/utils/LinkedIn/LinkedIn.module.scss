@@ -1,0 +1,6 @@
+.linkedIn {
+  @apply hidden md:flex h-full w-10 items-center justify-center;
+  & > svg {
+    @apply w-4;
+  }
+}

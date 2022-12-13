@@ -1,9 +1,10 @@
 import { createElement } from 'react';
-import Header from 'components/Header';
-import Main from 'components/Main';
+import Header from 'components/layout/Header';
+import Main from 'components/layout/Main';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ROUTES } from 'constants';
 import './App.scss';
+import { WORK_LINKS } from 'constants';
 
 /**
  * Function used to render the layout of the portfolio.

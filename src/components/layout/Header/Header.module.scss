@@ -9,10 +9,6 @@
   }
 
   .openMenu {
-    @apply md:hidden;
-  }
-
-  .linkedIn {
-    @apply hidden md:block;
+    @apply md:hidden h-full w-20;
   }
 }

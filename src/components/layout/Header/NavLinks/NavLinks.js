@@ -10,14 +10,14 @@ import { NAV_LINKS } from 'constants';
  * @author  John Robert McCann
  * @since   08/27/2022
  * @version 1.0.0
- * @param  {object}   props              The component as props.
- * @param  {string}   props.className    Optional className for the provided <ul/>.
- * @param  {string}   props.list         The links to provide into the <ul /> element.
- * @return {Element}                     The NavLinks component.
+ * @param  {object}   props             The component as props.
+ * @param  {string}   props.className   Optional className for the provided <ul/>.
+ * @param  {string}   props.list        The links to provide into the <ul /> element.
+ * @param  {string}   props.closeDrawer Optional function used to close the mobile drawer if open.
+ * @return {Element}                    The NavLinks component.
  */
-export default function NavLinks({ className, links }) {
+export default function NavLinks({ className, links, closeDrawer }) {
   const { pathname = null } = useLocation();
-  console.log('jr pathname', pathname);
 
   return (
     <ul className={cn(className ? className : styles.list)}>
@@ -33,6 +33,7 @@ export default function NavLinks({ className, links }) {
               pathname === link?.url && styles.currentPath
             )}
             key={i}
+            onClick={closeDrawer}
           >
             <Link to={link?.url}>{link?.title}</Link>
           </li>
@@ -54,9 +55,11 @@ NavLinks.propTypes = {
       protected: PropTypes.bool,
     })
   ),
+  clsoeDrawer: PropTypes.func,
 };
 
 NavLinks.defaultProps = {
   className: null,
   links: NAV_LINKS,
+  closeDrawer: () => {},
 };

@@ -1,5 +1,5 @@
 import styles from './Main.module.scss';
-import Container from 'components/Container';
+import Container from 'components/layout/Container';
 import cn from 'classnames';
 
 /**
