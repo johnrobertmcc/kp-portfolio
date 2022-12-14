@@ -1,0 +1,37 @@
+.page {
+  @apply max-w-screen-lg mx-auto md:px-0;
+  .heading {
+    @apply text-xl font-bold;
+  }
+
+  .intro {
+    @apply w-1/2 pt-5 pb-20;
+  }
+
+  .articleList {
+    @apply grid grid-cols-2 gap-10;
+
+    .articleItem {
+      @apply w-full h-72 cursor-pointer;
+
+      &:hover {
+        a {
+          @apply underline;
+        }
+      }
+
+      .imgContainer {
+        @apply relative w-full h-36;
+
+        & .image {
+          @apply w-full h-full;
+          @apply top-0 left-0 absolute;
+        }
+      }
+    }
+  }
+
+  .navContainer {
+    @apply w-full flex justify-between;
+  }
+}

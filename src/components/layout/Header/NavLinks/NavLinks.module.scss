@@ -3,9 +3,9 @@
   @apply h-16;
 
   .link {
-    @apply px-3 font-bold hover:underline h-full;
+    @apply font-bold hover:underline h-full;
     a {
-      @apply h-full;
+      @apply h-full px-3;
       @apply flex items-center;
     }
   }

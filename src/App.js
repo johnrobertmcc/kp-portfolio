@@ -4,7 +4,6 @@ import Main from 'components/layout/Main';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ROUTES } from 'constants';
 import './App.scss';
-import { WORK_LINKS } from 'constants';
 
 /**
  * Function used to render the layout of the portfolio.
@@ -18,9 +17,13 @@ export default function App() {
       <Main>
         <Routes>
           {ROUTES?.map((route, i) => {
-            const { path, element } = route;
+            const { path, element, props = {} } = route;
             return (
-              <Route path={path} element={createElement(element)} key={i} />
+              <Route
+                path={path}
+                element={createElement(element, props)}
+                key={i}
+              />
             );
           })}
         </Routes>

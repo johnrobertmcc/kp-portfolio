@@ -1,3 +1,25 @@
-.string{
-  font-weight: 900;
+.aboutPage {
+  @apply grid grid-cols-1 md:grid-cols-2 text-center;
+
+  .information {
+    @apply pb-20;
+    .heading {
+      @apply py-10 text-xl font-semibold;
+    }
+
+    .introduction {
+      @apply leading-tight;
+    }
+  }
+
+  .providedList {
+    @apply flex md:flex-col justify-center;
+
+    > ul {
+      @apply pb-10;
+      > h4 {
+        @apply font-bold pb-5;
+      }
+    }
+  }
 }

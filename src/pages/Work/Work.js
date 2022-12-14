@@ -2,7 +2,6 @@ import { WORK_LINKS } from 'constants';
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import styles from './Work.module.scss';
-import Header from '../../components/layout/Header/Header';
 import Container from 'components/layout/Container';
 import { Link } from 'react-router-dom';
 import { INTRODUCTION } from 'constants';
@@ -22,7 +21,6 @@ export default function Work() {
     <Container paddingTop paddingBtm>
       <ul className={styles.categories}>
         {WORK_LINKS.map((link, i) => {
-          // const ref = linkRefs.current[i];
           return (
             <li
               key={i}

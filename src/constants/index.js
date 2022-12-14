@@ -1,20 +1,25 @@
 import Work from 'pages/Work';
 import About from 'pages/About';
 import Contact from 'pages/Contact';
-import Proptech from 'components/sections/Proptech';
-import Fashion from 'components/sections/Fashion';
-import Health from 'components/sections/Health';
-import Photography from 'components/sections/Photography';
+import ArticleList from 'components/utils/ArticleList';
+import * as propTechProps from 'constants/proptech';
+import * as healthProps from 'constants/health';
+import * as fashionProps from 'constants/fashion';
+import * as photographyProps from 'constants/photography';
 
 export const ROUTES = [
   { path: '/', element: Work },
   { path: '/work', element: Work },
   { path: '/about', element: About },
   { path: '/contact', element: Contact },
-  { path: '/work/proptech', element: Proptech },
-  { path: '/work/health', element: Health },
-  { path: '/work/fashion', element: Fashion },
-  { path: '/work/photography', element: Photography },
+  { path: '/work/proptech', element: ArticleList, props: { ...propTechProps } },
+  { path: '/work/health', element: ArticleList, props: { ...healthProps } },
+  { path: '/work/fashion', element: ArticleList, props: { ...fashionProps } },
+  {
+    path: '/work/photography',
+    element: ArticleList,
+    props: { ...photographyProps },
+  },
 ];
 
 export const ACCESSIBLE_HEADER = 'Kimberly Perez';
