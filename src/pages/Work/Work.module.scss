@@ -1,5 +1,5 @@
 .categories {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4 max-w-screen-lg mx-auto md:px-0;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4 mx-auto md:px-0;
 
   .listItem {
     @apply border cursor-pointer;

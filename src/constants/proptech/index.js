@@ -17,7 +17,7 @@ export const articles = [
   {
     img: 'https://picsum.photos/id/240/200/300',
     title: 'Revamping "Smart" Buildings to be "Future-Ready"',
-    url: 'httpsn <article />://www.rewyre.com/blog-posts/revamping-smart-buildings-to-be-future-ready',
+    url: 'https://www.rewyre.com/blog-posts/revamping-smart-buildings-to-be-future-ready',
   },
   {
     img: 'https://picsum.photos/id/240/200/300',

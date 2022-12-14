@@ -1,5 +1,5 @@
 .page {
-  @apply max-w-screen-lg mx-auto md:px-0;
+  @apply mx-auto md:px-0;
   .heading {
     @apply text-xl font-bold;
   }
@@ -9,7 +9,7 @@
   }
 
   .articleList {
-    @apply grid grid-cols-2 gap-10;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 border;
 
     .articleItem {
       @apply w-full h-72 cursor-pointer;
