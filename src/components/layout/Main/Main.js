@@ -14,7 +14,7 @@ import cn from 'classnames';
  */
 export default function Main({ children }) {
   return (
-    <Container tag="main" className={cn(styles.main)}>
+    <Container tag="main" className={cn(styles.main)} id="main">
       {children}
     </Container>
   );

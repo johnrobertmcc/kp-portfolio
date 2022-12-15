@@ -19,6 +19,7 @@ import styles from './Container.module.scss';
  * @param  {string}  props.tag          The container tag
  * @param  {object}  props.containerRef The container ref.
  * @param  {number}  props.tabIndex     The tab index.
+ * @param  {string}  props.id           The optional ID.
  * @return {Element}                    The Container component.
  */
 export default function Container({
@@ -30,6 +31,7 @@ export default function Container({
   layout,
   containerRef,
   tabIndex,
+  id,
 }) {
   return createElement(
     tag,
@@ -43,6 +45,7 @@ export default function Container({
       ),
       ref: containerRef && containerRef,
       tabIndex: tabIndex && tabIndex,
+      id: id && id,
     },
     children
   );
@@ -54,6 +57,7 @@ Container.propTypes = {
   paddingTop: PropTypes.bool,
   paddingBtm: PropTypes.bool,
   layout: PropTypes.oneOf(['standard', 'nav']),
+  id: PropTypes.string,
 };
 
 Container.defaultProps = {

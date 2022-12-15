@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.scss';
 import Container from 'components/layout/Container';
+import { Link } from 'react-router-dom';
 import NavLinks from './NavLinks';
+import BarsIcon from 'components/utils/BarsIcon';
 import NavMenu from './NavMenu';
 import cn from 'classnames';
 import { ACCESSIBLE_HEADER } from 'constants';
@@ -29,20 +31,20 @@ export default function Header() {
     }
   }, [open]);
 
-  console.log('jr open', open);
   return (
     <Container layout="nav" tag={'header'} className={cn(styles.header)}>
       <h1 className="sr-only">{ACCESSIBLE_HEADER}</h1>
+      <a href="#main" className={styles.mainContent}>
+        Skip to main content
+      </a>
       <div className={styles.navigation}>
-        <img
-          src="./favicon.webp"
-          alt="Kimberly Perez"
-          className={styles.logoImg}
-        />
+        <Link to="/work" className={styles.topHeading}>
+          Kimberly Perez
+        </Link>
         <NavLinks />
       </div>
       <button onClick={() => setOpen(true)} className={styles.openMenu}>
-        Menu
+        <BarsIcon />
       </button>
       <NavMenu open={open} setOpen={setOpen} />
       <LinkedIn />

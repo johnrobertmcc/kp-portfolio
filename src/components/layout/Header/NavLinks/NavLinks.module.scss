@@ -1,6 +1,6 @@
 .list {
   @apply hidden md:flex justify-between items-center;
-  @apply h-16;
+  @apply h-16 mt-1;
 
   .link {
     @apply font-bold hover:underline h-full;

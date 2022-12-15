@@ -15,7 +15,7 @@
 }
 
 .intro {
-  @apply pt-10 text-lg grid grid-cols-2 col-span-1 max-w-screen-lg mx-auto;
+  @apply pt-10 text-lg grid grid-cols-2 col-span-1 mx-auto;
 
   .copy {
     @apply pb-5;

@@ -1,8 +1,28 @@
 .header {
   @apply relative border-none;
   @apply h-24 flex justify-between items-center;
+
+  .mainContent {
+    @apply absolute z-10 p-4 bg-black text-white opacity-0;
+    @apply -left-96;
+    &:focus {
+      @apply left-0 top-5 transform translate-x-8 opacity-100;
+    }
+  }
+
   .navigation {
     @apply flex justify-center items-center;
+
+    .topHeading {
+      @apply text-2xl border border-transparent h-16;
+      @apply flex items-center justify-center;
+      @apply mr-4;
+
+      &:hover {
+        @apply border border-black/10;
+      }
+    }
+
     .logoImg {
       @apply h-12 border;
     }
