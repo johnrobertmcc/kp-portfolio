@@ -5,7 +5,9 @@
     @apply border cursor-pointer;
 
     .imgContainer {
-      @apply relative h-72 w-full;
+      @apply relative w-full;
+
+      height: 650px;
 
       .image {
         @apply absolute top-0 left-0 h-full w-full;
