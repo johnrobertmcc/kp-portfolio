@@ -1,6 +1,5 @@
 import Drawer from 'components/utils/Drawer';
 import LinkedIn from 'components/utils/LinkedIn';
-import PropTypes from 'prop-types';
 import NavLinks from '../NavLinks';
 import styles from './NavMenu.module.scss';
 

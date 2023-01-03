@@ -1,6 +1,5 @@
-import Work from 'pages/Work';
-import About from 'pages/About';
-import Contact from 'pages/Contact';
+import Work from 'components/pages/Work';
+import About from 'components/pages/About';
 import ArticleList from 'components/utils/ArticleList';
 import * as propTechProps from 'constants/proptech';
 import * as healthProps from 'constants/health';
@@ -11,7 +10,6 @@ export const ROUTES = [
   { path: '/', element: Work },
   { path: '/work', element: Work },
   { path: '/about', element: About },
-  { path: '/contact', element: Contact },
   { path: '/work/proptech', element: ArticleList, props: { ...propTechProps } },
   { path: '/work/health', element: ArticleList, props: { ...healthProps } },
   { path: '/work/fashion', element: ArticleList, props: { ...fashionProps } },
@@ -27,7 +25,6 @@ export const ACCESSIBLE_HEADER = 'Kimberly Perez';
 export const NAV_LINKS = [
   { url: '/', title: 'Work', protected: false },
   { url: '/about', title: 'About', protected: false },
-  { url: '/contact', title: 'Contact', protected: false },
 ];
 
 export const LINKED_IN =

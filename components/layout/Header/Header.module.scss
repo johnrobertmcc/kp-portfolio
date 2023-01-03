@@ -1,6 +1,11 @@
 .header {
   @apply relative border-none;
   @apply h-24 flex justify-between items-center;
+  @apply p-0 m-0;
+
+  .screenReader {
+    @apply sr-only;
+  }
 
   .mainContent {
     @apply absolute z-10 p-4 bg-black text-white opacity-0;
@@ -13,8 +18,8 @@
   .navigation {
     @apply flex justify-center items-center;
 
-    .topHeading {
-      @apply text-2xl border border-transparent h-16;
+    > .topHeading {
+      @apply text-xl border border-transparent h-16;
       @apply flex items-center justify-center;
       @apply mr-4;
 

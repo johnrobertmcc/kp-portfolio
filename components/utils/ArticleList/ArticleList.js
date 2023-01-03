@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './ArticleList.module.scss';
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Container from 'components/layout/Container';
 
 /**
@@ -64,8 +64,8 @@ export default function ArticleList({
         </ul>
       )}
       <div className={styles.navContainer}>
-        {prevPage && <Link to={prevPage?.url}>{prevPage?.title} </Link>}
-        {nextPage && <Link to={nextPage?.url}>{nextPage?.title} </Link>}
+        {prevPage && <Link href={prevPage?.url}>{prevPage?.title} </Link>}
+        {nextPage && <Link href={nextPage?.url}>{nextPage?.title} </Link>}
       </div>
     </Container>
   );

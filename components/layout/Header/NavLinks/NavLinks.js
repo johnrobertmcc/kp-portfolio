@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import styles from './NavLinks.module.scss';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
 import cn from 'classnames';
 import { NAV_LINKS } from 'constants';
+import { useRouter } from 'next/router';
 
 /**
  * Renders the app's Links based on the authenticated state.
@@ -17,7 +18,7 @@ import { NAV_LINKS } from 'constants';
  * @return {Element}                    The NavLinks component.
  */
 export default function NavLinks({ className, links, closeDrawer }) {
-  const { pathname = null } = useLocation();
+  const router = useRouter();
 
   return (
     <ul className={cn(className ? className : styles.list)}>
@@ -30,12 +31,12 @@ export default function NavLinks({ className, links, closeDrawer }) {
           <li
             className={cn(
               styles.link,
-              pathname === link?.url && styles.currentPath
+              router.asPath === link?.url && styles.currentPath
             )}
             key={i}
             onClick={closeDrawer}
           >
-            <Link to={link?.url}>{link?.title}</Link>
+            <Link href={link?.url}>{link?.title}</Link>
           </li>
         );
       })}

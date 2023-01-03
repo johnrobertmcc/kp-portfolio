@@ -4,9 +4,11 @@
 
   .link {
     @apply font-bold hover:underline h-full;
+    @apply list-none;
     a {
       @apply h-full px-3;
       @apply flex items-center;
+      @apply text-black no-underline;
     }
   }
 }

@@ -22,8 +22,8 @@ export default function BarsIcon({ width, height }) {
   );
 }
 BarsIcon.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 BarsIcon.defaultProps = {
   width: '75px',

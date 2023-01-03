@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Header.module.scss';
 import Container from 'components/layout/Container';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import NavLinks from './NavLinks';
 import BarsIcon from 'components/utils/BarsIcon';
 import NavMenu from './NavMenu';
@@ -33,13 +33,13 @@ export default function Header() {
 
   return (
     <Container layout="nav" tag={'header'} className={cn(styles.header)}>
-      <h1 className="sr-only">{ACCESSIBLE_HEADER}</h1>
+      <h1 className={styles.screenReader}>{ACCESSIBLE_HEADER}</h1>
       <a href="#main" className={styles.mainContent}>
         Skip to main content
       </a>
       <div className={styles.navigation}>
-        <Link to="/work" className={styles.topHeading}>
-          Kimberly Perez
+        <Link href="/work">
+          <a className={styles.topHeading}>Kimberly Perez</a>
         </Link>
         <NavLinks />
       </div>

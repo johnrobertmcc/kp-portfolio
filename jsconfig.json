@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src"
+    "baseUrl": "."
   },
-  "include": ["src", "src/components/utils/ArticleList"],
   "exclude": ["node_modules"]
 }
